@@ -1,0 +1,46 @@
+.wrapper{
+    width: 95%;
+    height: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+    background-color: rgb(187, 186, 186, 0.1);
+    display: flex;
+}
+
+
+
+.wrapperBox{
+    width: 80%;
+    height: 100%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 1.5vmin;
+    color: rgb(187, 186, 186);
+}
+
+
+
+.wrapperBtn{
+    width: 20%;
+    height: 100%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapperBtn button{
+    width: 90%;
+    height: 60%;
+    border-radius: 30px;
+    font-size: 3vmin;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    background: linear-gradient(to right, #6a11cb, #2575fc, #6a11cb);
+    color: white;
+}

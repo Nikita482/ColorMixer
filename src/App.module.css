@@ -1,0 +1,67 @@
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    row-gap: 20px;
+    grid-template-areas: "top" "bottom";
+    grid-template-rows: 2fr 1fr;
+    background: linear-gradient(180deg, #001932, #003366);
+}
+
+.wrapperTop{
+    display: grid;
+    grid-area: top;
+    grid-template-areas: "name spinner menu";
+    grid-template-columns: 1fr 1.5fr 1fr;
+}   
+.wrapperBottom{
+    display: grid;
+    grid-area: bottom;
+    grid-template-areas: 
+        "ribbon ribbon ribbon"
+        "btns btns btns"
+        "Story Story Story";
+    grid-template-rows: 1.5fr 1.2fr 2fr;
+    row-gap: 20px;
+}
+
+.wrapperName{
+    grid-area: name;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 10vmin;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition-duration: 300ms;
+}
+.wrapperSpinner{
+    grid-area: spinner;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapperMemu{
+    grid-area: menu;
+}
+
+.wrapperRibbon{
+    grid-area: ribbon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapperBtns{
+    grid-area: btns;
+}
+
+.wrapperStory{
+    grid-area: Story;
+    color: white;
+}
+
+
+
