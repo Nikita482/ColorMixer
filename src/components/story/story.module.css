@@ -10,7 +10,7 @@
 
 
 .wrapperBox{
-    width: 80%;
+    width: 80vw;
     height: 100%;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -20,6 +20,20 @@
     padding-left: 20px;
     font-size: 1.5vmin;
     color: rgb(187, 186, 186);
+}
+.boxItems{
+    width: auto;
+    max-width: 80vw;
+    height: 100%;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+}
+.boxText{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -44,3 +58,7 @@
     background: linear-gradient(to right, #6a11cb, #2575fc, #6a11cb);
     color: white;
 }
+
+
+
+

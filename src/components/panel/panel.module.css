@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .wrapperPadding{
@@ -22,8 +23,8 @@
 }
 
 .paddingPanel{
-    width: 50%;
-    aspect-ratio: 4 / 1;
+    width: 35%;
+    aspect-ratio: 7 / 1;
     background-color: rgb(187, 186, 186, 0.1);
     padding: 10px;
     border-radius: 40px;
@@ -31,60 +32,43 @@
     top: 0;
     right: 0;
     display: flex;
+    align-items: center;
 }
 
-.panelStory{
+
+.ColorLight, .ColorDark{
     height: 100%;
     aspect-ratio: 1 / 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.panelStory button{
-    width: 80%;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    font-size: 3vmin;
-    background: linear-gradient(to right, #6a11cb, #2575fc, #6a11cb);
-    color: white;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.panelBase{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.baseColor{
-    width: 90%;
-    height: 80%;
-    background-color: rgb(187, 186, 186, 0.1);
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.ColorLight{
-    height: 100%;
-    aspect-ratio: 1 / 1;
-    font-size: 3vmin;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 10px;
+    position: absolute;
+    z-index: 1;
+    font-size: 3vmin;
+    color: #fff;
+}
+.ColorLight{
+    right: 60%;
 }
 .ColorDark{
-    height: 100%;
-    aspect-ratio: 1 / 1;
-    font-size: 3vmin;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
+    right: 0;
 }
 
+
+
+
+.menu{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+}
+
+
+@media (max-width: 1200px) {
+    .ColorLight{
+        right: 55%;
+    }
+}

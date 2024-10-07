@@ -1,9 +1,9 @@
 .wrapper{
     width: 90%;
     height: 90%;
-    background-color: rgb(187, 186, 186);
     border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgb(127, 127, 127);
 }

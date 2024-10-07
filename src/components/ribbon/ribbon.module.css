@@ -14,29 +14,23 @@
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 20px 0 20px;
-}
 
-.boxColor{
+}
+.colorBox{
     width: auto;
-    height: 90%;
-    display: flex;
-}
-.color{
+    max-width: 68vw;
     height: 100%;
-    aspect-ratio: 1 / 1;
-    background-color: white;
-    border-radius: 50%;
-}
-.plus{
-    height: 100%;
-    aspect-ratio: 1 / 3;
-    font-size: 3vw;
+    margin-left: 20px;
+    flex: 0 0 auto;
+    overflow-x: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-family: "Montserrat", sans-serif;
-    margin: 0 10px;
+}
+.boxPoint{
+    width: 100px;
+    height: 100%;
+    margin-right: 20px;
+    flex: 0 0 auto;
 }
 .ColorAdd{
     height: 100%;

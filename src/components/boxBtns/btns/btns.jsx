@@ -1,31 +1,37 @@
 import styles from "./btns.module.css"
 import { useContext } from "react"
 
-import Window from "../window/window"
 import { ContextHover } from "../context/hoverContext"
-import { ContextClick } from "../context/clickContext"
+import { ContextBtn } from "../../contextAll/clickContext"
+import { PaletteContext } from "../context/PaletteContext"
+import { ContextStoryColor } from "../../contextAll/storyColor"
 
 
 export default function Btns(){
 
-    const {mouseRgb, notMouseRgb, mouseColor, notMouseColor, mouseMix, notMouseMix, mousePalette, notMousePalette} = useContext(ContextHover)
-    const {click} = useContext(ContextClick)
+    const {mouseColor, notMouseColor, mousePalette, notMousePalette} = useContext(ContextHover)
+    const {click} = useContext(ContextBtn)
+    const {btnsColor} = useContext(PaletteContext)
+    const {handleColorClick} = useContext(ContextStoryColor)
+
 
     return(
         <>
             <div className={styles.wrapper}>
-                <div className={styles.wrapperBtns}>
-                    <button id="btnGrb" onMouseEnter={mouseRgb} onMouseLeave={notMouseRgb} className={styles.btnRgb}>Создать rgb</button>
+                <div id="btnsColor" className={styles.wrapperBtns}>
                     <button id="btnColor" onClick={click} onMouseEnter={mouseColor} onMouseLeave={notMouseColor} className={styles.btnColor}>Добавить цвет</button>
-                    <Window />
+                    
+                    <div id="boxPalette" className={styles.btnPaletteBox}>
+                        {Array.from({ length: 40 }).map((_, index) => (
+                            <div key={index} className={styles.Palette}><div onClick={handleColorClick} className={styles.PaletteItem}></div></div>
+                        ))}
+                    </div>
                 </div>
+
+
 
                 <div className={styles.wrapperColor}>
-                    <button id="btnPalette" onMouseEnter={mousePalette} onMouseLeave={notMousePalette} className={styles.btnPalette}><ion-icon name="color-palette"></ion-icon></button>
-                </div>
-
-                <div className={styles.wrapperMix}>
-                    <button id="btnMix" onMouseEnter={mouseMix} onMouseLeave={notMouseMix} className={styles.btnMix}>Mix</button>
+                    <button id="btnPalette" onClick={btnsColor} onMouseEnter={mousePalette} onMouseLeave={notMousePalette} className={styles.btnPalette}><ion-icon name="color-palette"></ion-icon></button>
                 </div>
             </div>
         </>
